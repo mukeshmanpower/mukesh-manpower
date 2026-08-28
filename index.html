@@ -38,31 +38,23 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Navigation to other sections -->
     <section class="services-section">
-        <h2>हमारी मैनपावर सेवाएं</h2>
-        <ul class="service-list">
-            <li>⚙️ मशीन ऑपरेटर एवं टेक्निकल स्टाफ</li>
-            <li>👷 मशीन हेल्पर एवं फैक्ट्री वर्कर्स</li>
-            <li>📦 वेयरहाउस, लॉजिस्टिक्स और लोडर-अनलोडर</li>
-        </ul>
+        <h2>त्वरित मेनू (Quick Links)</h2>
+        <div class="city-grid">
+            <a href="apply/index.html" class="city-card" style="text-decoration:none; color:inherit;">📝 जॉब के लिए अप्लाई (Apply)</a>
+            <a href="workers/index.html" class="city-card" style="text-decoration:none; color:inherit;">👷 वर्कर्स लिस्ट (Workers)</a>
+            <a href="companies/index.html" class="city-card" style="text-decoration:none; color:inherit;">🏢 कंपनियां (Companies)</a>
+            <a href="dashboard/index.html" class="city-card" style="text-decoration:none; color:inherit;">📊 डैशबोर्ड (Dashboard)</a>
+        </div>
     </section>
 
-    <!-- Fixed Bottom Navigation (App Like) -->
+    <!-- Fixed Bottom Navigation -->
     <nav class="bottom-nav">
         <a href="index.html" class="nav-item active">🏠 होम</a>
         <a href="tel:6379403821" class="nav-item">📞 कॉल</a>
         <a href="https://wa.me/916379403821" target="_blank" class="nav-item">💬 व्हाट्सएप</a>
     </nav>
-
-    <!-- Service Worker Registration for PWA / Install Prompt -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(() => console.log('Service Worker Registered Successfully'))
-          .catch((err) => console.log('Service Worker Failed', err));
-      }
-    </script>
 
 </body>
 </html>
