@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mukesh Manpower - Right People. Right Place. Right Time.</title>
+    <title>Mukesh Manpower - Right People, Right Place, Right Time</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0d1b2a">
+    <meta name="theme-color" content="#0b192c">
 </head>
 <body>
 
-    <!-- Top App Bar -->
+    <!-- App Header -->
     <header class="app-header">
         <div class="logo-container">
             <h2>MUKESH <span>MANPOWER</span></h2>
         </div>
-        <div class="header-badge">Micro Enterprise</div>
+        <div class="header-badge">Verified</div>
     </header>
 
     <!-- Hero Section -->
@@ -23,6 +23,7 @@
         <h1>RIGHT PEOPLE. <span class="highlight-red">RIGHT PLACE.</span> RIGHT TIME.</h1>
         <p class="tagline">आपकी ज़रूरत, हमारी ज़िम्मेदारी</p>
         <div class="service-tag">हर प्रकार की कंपनी के लिए प्रोफेशनल मैनपावर सप्लाई</div>
+        <br>
         <a href="tel:6379403821" class="cta-button">अभी कॉल करें: 6379403821</a>
     </section>
 
@@ -37,31 +38,31 @@
         </div>
     </section>
 
-    <!-- Manpower Services Section -->
+    <!-- Services Section -->
     <section class="services-section">
         <h2>हमारी मैनपावर सेवाएं</h2>
         <ul class="service-list">
             <li>⚙️ मशीन ऑपरेटर एवं टेक्निकल स्टाफ</li>
             <li>👷 मशीन हेल्पर एवं फैक्ट्री वर्कर्स</li>
             <li>📦 वेयरहाउस, लॉजिस्टिक्स और लोडर-अनलोडर</li>
-            <li>💻 ऑफिस एडमिन, डेटा एंट्री एवं सपोर्ट स्टाफ</li>
-            <li>🏗️ कंस्ट्रक्शन एवं सिविल प्रोजेक्ट्स लेबर</li>
         </ul>
     </section>
 
-    <!-- Fixed Bottom Navigation Bar (App Like) -->
+    <!-- Fixed Bottom Navigation (App Like) -->
     <nav class="bottom-nav">
-        <a href="#" class="nav-item active">🏠 होम</a>
+        <a href="index.html" class="nav-item active">🏠 होम</a>
         <a href="tel:6379403821" class="nav-item">📞 कॉल</a>
-        <a href="https://wa.me/916379403821" class="nav-item">💬 व्हाट्सएप</a>
+        <a href="https://wa.me/916379403821" target="_blank" class="nav-item">💬 व्हाट्सएप</a>
     </nav>
 
+    <!-- Service Worker Registration for PWA / Install Prompt -->
     <script>
-        // PWA Service Worker Registration
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
-        }
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(() => console.log('Service Worker Registered Successfully'))
+          .catch((err) => console.log('Service Worker Failed', err));
+      }
     </script>
-</body>
-  </html>
 
+</body>
+</html>
