@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AdSlider from "@/components/AdSlider";
 
 const locations = [
   {
@@ -43,6 +44,7 @@ const services = [
 export default function HomePage() {
   return (
     <main>
+      <AdSlider />
       {/* Header */}
       <header
         style={{
@@ -617,3 +619,4 @@ export default function HomePage() {
     </main>
   );
                 }
+                  
